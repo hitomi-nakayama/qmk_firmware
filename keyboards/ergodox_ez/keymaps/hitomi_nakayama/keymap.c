@@ -16,38 +16,38 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 /* Keymap 0: Basic layer
  *
  * ,--------------------------------------------------.           ,--------------------------------------------------.
- * | Esc    |   1  |   2  |   3  |   4  |   5  | LEFT |           | RIGHT|   6  |   7  |   8  |   9  |   0  |   -    |
+ *0| Esc    |   1  |   2  |   3  |   4  |   5  | LEFT |           | RIGHT|   6  |   7  |   8  |   9  |   0  |   -    |
  * |--------+------+------+------+------+-------------|           |------+------+------+------+------+------+--------|
- * | Tab    |   Q  |   W  |   E  |   R  |   T  |  L1  |           |  =   |   Y  |   U  |   I  |   O  |   P  |   [    |
+ *1| Tab    |   Q  |   W  |   E  |   R  |   T  |  L1  |           |  =   |   Y  |   U  |   I  |   O  |   P  |   [    |
  * |--------+------+------+------+------+------|      |           |      |------+------+------+------+------+--------|
- * | BkSp   |   A  |   S  |   D  |   F  |   G  |------|           |------|   H  |   J  |   K  |   L  |; / L2|' / Cmd |
+ *2| BkSp   |   A  |   S  |   D  |   F  |   G  |------|           |------|   H  |   J  |   K  |   L  |; / L2|' / Cmd |
  * |--------+------+------+------+------+------| Hyper|           | Meh  |------+------+------+------+------+--------|
- * | LShift |Z/Ctrl|   X  |   C  |   V  |   B  |      |           |      |   N  |   M  |   ,  |   .  |//Ctrl| RShift |
+ *3| LShift |Z/Ctrl|   X  |   C  |   V  |   B  |      |           |      |   N  |   M  |   ,  |   .  |//Ctrl| RShift |
  * `--------+------+------+------+------+-------------'           `-------------+------+------+------+------+--------'
- *   |Grv/L1|   =  | Caps | LAlt | LGui |                                       |  L2  | AltGr|   ]  |   \  | ~L1  |
+ * 4 |Grv/L1|   =  | Caps | LAlt | LGui |                                       |  L2  | AltGr|   ]  |   \  | ~L1  |
  *   `----------------------------------'                                       `----------------------------------'
  *                                        ,-------------.       ,-------------.
- *                                        | App  |  L2  |       | Alt  |Ctrl/Esc|
+ *                                      5 | App  |  L2  |       | Alt  |Ctrl/Esc|
  *                                 ,------|------|------|       |------+--------+------.
- *                                 |      |      | Home |       | PgUp |        |      |
+ *                               6 |      |      | Home |       | PgUp |        |      |
  *                                 | Space| Del  |------|       |------|  Tab   |Enter |
- *                                 |      |      | End  |       | PgDn |        |      |
+ *                               7 |      |      | End  |       | PgDn |        |      |
  *                                 `--------------------'       `----------------------'
  */
 [BASE] = LAYOUT_ergodox_pretty(
-  /* L */ KC_ESC,          KC_1,        KC_2,          KC_3,    KC_4,    KC_5,    KC_LEFT,
-  /* R */ KC_RGHT,      KC_6,    KC_7,    KC_8,    KC_9,              KC_0,           KC_MINS,
+  /* L0 */ KC_ESC,          KC_1,        KC_2,          KC_3,    KC_4,    KC_5,    KC_LEFT,
+  /* R */  KC_RGHT,      KC_6,    KC_7,    KC_8,    KC_9,              KC_0,           KC_MINS,
 
-  /* L */ KC_TAB,          KC_Q,        KC_W,          KC_E,    KC_R,    KC_T,    TG(SYMB),
+  /* L1 */ KC_TAB,          KC_Q,        KC_W,          KC_E,    KC_R,    KC_T,    TG(SYMB),
   /* R */ KC_EQL,     KC_Y,    KC_U,    KC_I,    KC_O,              KC_P,           KC_LBRC,
 
-  /* L */ KC_BSPC,         KC_A,        KC_S,          KC_D,    KC_F,    KC_G,
-  /* R */ KC_H,    KC_J,    KC_K,    KC_L,    KC_SCLN, GUI_T(KC_QUOT),
+  /* L2 */ KC_BSPC, LGUI_T(KC_A), LALT_T(KC_S), LCTL_T(KC_D), LSFT_T(KC_F), KC_G,
+  /* R */  KC_H,    RSFT_T(KC_J), RCTL_T(KC_K), RALT_T(KC_L), RGUI_T(KC_SCLN), GUI_T(KC_QUOT),
 
-  /* L */ KC_LSFT,         CTL_T(KC_Z), KC_X,          KC_C,    KC_V,    KC_B,    ALL_T(KC_NO),
+  /* L3 */ KC_LSFT,         CTL_T(KC_Z), KC_X,          KC_C,    KC_V,    KC_B,    ALL_T(KC_NO),
   /* R */ MEH_T(KC_NO), KC_N,    KC_M,    KC_COMM, KC_DOT,           CTL_T(KC_SLSH), KC_RSFT,
 
-  /* L */ LT(SYMB,KC_GRV), KC_EQL,  KC_CAPS, KC_LALT, KC_LGUI,
+  /* L4 */ LT(SYMB,KC_GRV), KC_EQL,  KC_CAPS, KC_LALT, KC_LGUI,
   /* R */ MO(NAV),         KC_ALGR, KC_RBRC,       KC_BSLS, TT(SYMB),
 
 
